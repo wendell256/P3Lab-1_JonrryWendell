@@ -87,23 +87,27 @@ void ejercicio2(){
     ladoa = c;
     ladoc = hip;
     ladob = b; 
-  }else if(hip == ladob){
-    ladob = ladoc;
+  }else if(hip == b){
+    ladob = c;
     ladoc = hip;
     ladoa = a;
+  }else{
+    ladoc = c;
+    ladoa = a;
+    ladob = b;
   }
 
-  cout<<"ladoa: "<<ladoa<<endl;
+  /*cout<<"ladoa: "<<ladoa<<endl;
   cout<<"ladob: "<<ladob<<endl;
-  cout<<"ladoc: "<<ladoc<<endl;
+  cout<<"ladoc: "<<ladoc<<endl;*/
   //c²=a²+b² para todo triangulo rectangulo
   c_pot = pow(ladoc,2);
   a_pot = pow(ladoa,2);
   b_pot = pow(ladob,2);
   pitagoras = a_pot + b_pot;
-  cout<<"apot: "<<a_pot<<endl;
+  /*cout<<"apot: "<<a_pot<<endl;
   cout<<"bpot: "<<b_pot<<endl;
-  cout<<"cpot: "<<c_pot<<endl;
+  cout<<"cpot: "<<c_pot<<endl;*/
   /*α=arccos[(a²-b²-c²)/(-2bc)]
     β=arccos[(b²-a²-c²)/(-2ac)]
     γ=arccos[(c²-a²-b²)/(-2ac)]
