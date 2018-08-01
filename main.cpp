@@ -53,6 +53,38 @@ void ejercicio1(){
 
 //funcion que realiza el ejercicio dos
 void ejercicio2(){
+  int ladoa=0,ladob=0,ladoc=0,hip=0,pitagoras=0;
+  cout<<"ingrese la longitud del lado a: "<<endl;
+  cin>>ladoa;
+  while(ladoa<1){
+    cout<<"Valor no valido. Ingrese longitud de nuevo:";
+    cin>>ladoa;
+  };
+  cout<<"ingrese la longitud del lado b: "<<endl;
+  cin>>ladob;
+  while(ladob<1){
+    cout<<"Valor no valido. Ingrese longitud de nuevo:";
+    cin>>ladoa;
+  };
+  cout<<"ingrese la longitud del lado c: "<<endl;
+  cin>>ladoc;
+  while(ladoc<1){
+    cout<<"Valor no valido. Ingrese longitud de nuevo:";
+    cin>>ladoa;
+  };
+  int hip =fmax(fmax(ladoa,ladob),ladoc);
+  //c²=a²+b² para todo triangulo rectangulo
+  hip_pot = exp(hip,2);
+  a_pot = exp(ladoa,2);
+  b_pot = exp(ladob,2);
+  pitagoras = a_pot + b_pot;
+  
+  if(hip_pot == pitagoras){
+    cout<<"El triangulo es un triangulo rectangulo."<<endl;
+  }else{
+    cout<<"El triangulo no es un triangulo rectangulo."<<endl;
+  }//fin if de ver si es triangulo rectangulo
+  
 
 }
 //fin funcion que realiza el ejercicio dos
@@ -63,8 +95,6 @@ void ejercicio3(){
 
 } 
 //fin funcion que realiza el ejercicio tres
-
-
 
 int main(){
   char resp1='y';
