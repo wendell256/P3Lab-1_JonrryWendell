@@ -131,9 +131,38 @@ void ejercicio2(){
 //fin funcion que realiza el ejercicio dos
 
 
+//funcion que ve si es divisor
+bool divisor(int i,int num){
+  if(num%i==0){
+    return true;
+  }else{
+    return false;
+  }
+}
+//fin funcion que ve si es divisor
+
+
+//funcion que ve si es primo
+bool verprimos(int num){
+  int resp = 0;
+  for(int i=1;i<=num;i++){
+    if(num%i==0){
+      resp++;
+    }
+  }
+  if(resp==2){
+     
+    return true;
+  }else{
+    return false;
+  }
+}
+//fin funcion que ve si es primo
+
+
 //funcion que realiza el ejercicio tres
 void ejercicio3(){
-  int num = 0;
+  int num = 0,resfin=0,resfor=0;
   cout<<"ingrese numero a evaluar:"<<endl;
   cin>>num;
   
@@ -141,18 +170,22 @@ void ejercicio3(){
     cout<<"error numero no valido. ingrese numero:"<<endl;
     cin>>num;
   }
-
+  
   for(int i=1;i<=num;i++){
     if(divisor(i,num)){
-      
-    }
-  }//fin for
+      resfor = (i+num)/i;
+      if(verprimos(resfor)){
+      cout<<"("<<i<<" + "<<num<<")"<<"/"<<i<<endl;
+      resfin+=resfor;
+      }
+    }  
+  }
+  cout<<"Resultado: "<<resfin<<endl;
+
 } 
 //fin funcion que realiza el ejercicio tres
+  
 
-//funcion que encuentra la suma k
-
-//fin funcion que encuentra la suma k
 int main(){
   char resp1='y';
 
