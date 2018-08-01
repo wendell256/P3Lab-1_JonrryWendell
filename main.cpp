@@ -21,7 +21,7 @@ int menu(){
 
 //funcion que realiza el ejercicio uno
 void ejercicio1(){
-  int veces=0;
+  int veces=0,start=1;
   cout<<"Ingrese la cantidad de cubos que desea imprimir:"<<endl;
   cin>>veces;
   while(veces<0){
@@ -32,9 +32,20 @@ void ejercicio1(){
     cout<<"0³ = 0"<<endl;
   } 
   for(int i=1;i<=veces;i++){
-    int primerimpar;
-    for(int j=1;j<=i){
-    }//fin for ver en que impar empezar
+    int resultado = 0;
+    cout<<i<<"³ = ";
+    for(int j=i;j>=1;j--){
+      resultado+=start;
+      if(j==1){
+        cout<<start<<" = ";
+      }
+      else{
+        cout<<start<<" + ";
+      }//fin if-else para imprimir correctamente
+      start+=2;
+    }//fin for interior
+    cout<<resultado<<endl;
+    
   }//fin for exterior
 }
 //fin funcion que realiza el ejercicio uno
