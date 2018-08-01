@@ -57,6 +57,7 @@ void ejercicio2(){
   
   cout<<"ingrese la longitud del lado a: "<<endl;
   cin>>a;
+  
   while(a<1){
     cout<<"Valor no valido. Ingrese longitud de nuevo:";
     cin>>a;
@@ -64,6 +65,7 @@ void ejercicio2(){
   
   cout<<"ingrese la longitud del lado b: "<<endl;
   cin>>b;
+  
   while(b<1){
     cout<<"Valor no valido. Ingrese longitud de nuevo:";
     cin>>b;
@@ -71,13 +73,16 @@ void ejercicio2(){
   
   cout<<"ingrese la longitud del lado c: "<<endl;
   cin>>c;
+  
   while(c<1){
     cout<<"Valor no valido. Ingrese longitud de nuevo:";
     cin>>c;
   };
+
   hip =fmax(a,b);
   hip = fmax(hip, c);
   cout<<"hip:"<<hip<<endl;  
+  
   if(hip == a){
     ladoa = c;
     ladoc = hip;
@@ -87,6 +92,7 @@ void ejercicio2(){
     ladoc = hip;
     ladoa = a;
   }
+
   cout<<"ladoa: "<<ladoa<<endl;
   cout<<"ladob: "<<ladob<<endl;
   cout<<"ladoc: "<<ladoc<<endl;
@@ -127,13 +133,29 @@ void ejercicio2(){
 
 //funcion que realiza el ejercicio tres
 void ejercicio3(){
+  int num = 0;
+  cout<<"ingrese numero a evaluar:"<<endl;
+  cin>>num;
+  
+  while(num<0){
+    cout<<"error numero no valido. ingrese numero:"<<endl;
+    cin>>num;
+  }
 
+  for(int i=1;i<=num;i++){
+    if(divisor(i,num)){
+      
+    }
+  }//fin for
 } 
 //fin funcion que realiza el ejercicio tres
 
+//funcion que encuentra la suma k
+
+//fin funcion que encuentra la suma k
 int main(){
   char resp1='y';
-  
+
   while(resp1=='y' || resp1=='Y'){
     int seleccion = menu();
     switch(seleccion){
